@@ -1,8 +1,8 @@
-commit f057876113cf461caf6444e806299128645bcfc2 (HEAD -> master, origin/master, origin/HEAD)
-Merge: a21103a d1123a2
-Author: micmac1 <sebastian_ml@gmx.net>
-Date:   Tue Jul 2 09:37:45 2024 +0200
+commit 2933d0084f0331fd7da1e2181ba64954a0c84199 (HEAD -> master, origin/master, origin/HEAD)
+Merge: a99df6e a7e3d78
+Author: Jiri Slachta <jiri@slachta.eu>
+Date:   Thu Nov 21 20:52:32 2024 +0100
 
-    Merge pull request #877 from dangowrt/chan-lantiq-log-improvements
+    Merge pull request #890 from hnyman/gsm
     
-    asterisk-chan-lantiq: import patches improving log output
+    gsmlib: Make version apk compatible
