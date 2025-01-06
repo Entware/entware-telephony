@@ -1,6 +1,4 @@
 #
-# Copyright (C) 2021 Sebastian Kemper <sebastian_ml@gmx.net>
-#
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
@@ -8,8 +6,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=freetdm
-PKG_RELEASE:=2
-PKG_MAINTAINER:=Sebastian Kemper <sebastian_ml@gmx.net>
+PKG_RELEASE:=3
+PKG_MAINTAINER:=
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/freeswitch/freetdm.git
