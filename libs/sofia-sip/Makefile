@@ -1,6 +1,4 @@
 #
-# Copyright (C) 2020 Sebastian Kemper <sebastian_ml@gmx.net>
-#
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
@@ -10,7 +8,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=sofia-sip
 
 PKG_VERSION:=1.13.17
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/freeswitch/$(PKG_NAME)/tar.gz/v${PKG_VERSION}?
@@ -28,7 +26,7 @@ PKG_INSTALL:=1
 
 PKG_LICENSE:=LGPL-2.1+
 PKG_LICENSE_FILES:=COPYING
-PKG_MAINTAINER:=Sebastian Kemper <sebastian_ml@gmx.net>
+PKG_MAINTAINER:=
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
@@ -60,7 +58,6 @@ licensed under the LGPL.
 endef
 
 CONFIGURE_ARGS+= \
-	--disable-stun \
 	--without-doxygen \
 	--without-glib
 
