@@ -1,13 +1,22 @@
-commit c5652e69f293620548b2276f5a8983f7c1589e48 (HEAD -> master, origin/master, origin/HEAD)
-Author: Jiri Slachta <jiri@slachta.eu>
-Date:   Sat Dec 27 21:03:22 2025 +0100
+commit 9bcb6d71db03377ff49ccb099be763add9a5b059 (HEAD -> master, origin/master, origin/HEAD)
+Author: Roman Azarenko <roman.azarenko+gh@genexis.eu>
+Date:   Wed May 27 13:45:44 2026 +0200
 
-    asterisk: remove app-voicemail-imap module
+    pjproject: update CPE ID
     
-    Removed app-voicemail-imap from the Asterisk modules.
+    In the official CPE dictionary [1], `cpe:/a:pjsip:pjsip` is marked "deprecated"
+    for most of the recorded versions. The value of `deprecatedBy` points at
+    respective versions under `cpe:/a:teluu:pjsip`.
     
-    The module depends on uw-imap, which has been removed from OpenWrt packages feed as it is unmaintained and no longer available.
+    The deprecation marking is pretty recent (2026-05-06). There are CVEs from 2026
+    that reference both the deprecated [2] and the new [3] CPE IDs. It then depends
+    on each particular analysis tool whether it consults the CPE database for
+    deprecations.
     
-    There is currently no alternative IMAP implementation in OpenWrt that this module could depend on, so the module is removed.
+    Update the CPE ID to the non-deprecated value of `cpe:/a:teluu:pjsip`.
     
-    Signed-off-by: Jiri Slachta <jiri@slachta.eu>
+    [1]: https://nvd.nist.gov/products/cpe
+    [2]: https://www.cvedetails.com/vulnerability-list/vendor_id-21360/product_id-65638/Pjsip-Pjsip.html
+    [3]: https://www.cvedetails.com/vulnerability-list/vendor_id-17771/product_id-44396/Teluu-Pjsip.html
+    
+    Signed-off-by: Roman Azarenko <roman.azarenko+gh@genexis.eu>
