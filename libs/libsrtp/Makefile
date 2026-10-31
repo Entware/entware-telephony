@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=libsrtp
 PKG_VERSION:=2.6.0
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_VERSION:=v$(PKG_VERSION)
@@ -31,7 +31,7 @@ define Package/libsrtp2
   CATEGORY:=Libraries
   TITLE:=Secure RTP (SRTP) library, v$(PKG_VERSION)
   URL:=https://github.com/cisco/libsrtp
-  DEPENDS:=+libopenssl
+  DEPENDS:=+libopenssl $(ATOMIC64_DEPENDS)
   ABI_VERSION:=1
 endef
 
