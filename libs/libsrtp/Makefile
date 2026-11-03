@@ -5,6 +5,8 @@
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
 #
+# XXX Entware specific: TARGET_LDFLAGS += -Wl,--as-needed
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=libsrtp
@@ -24,6 +26,8 @@ PKG_CPE_ID:=cpe:/a:cisco:libsrtp
 include $(INCLUDE_DIR)/package.mk
 
 CONFIGURE_ARGS+=--enable-openssl
+
+TARGET_LDFLAGS += -Wl,--as-needed
 
 define Package/libsrtp2
   SUBMENU:=Telephony
